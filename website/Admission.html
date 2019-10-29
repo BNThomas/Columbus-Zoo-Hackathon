@@ -1,7 +1,18 @@
 <!Doctype html>
-<html>
-<body>
-<a href=".\Attractions.html">Attractions</a>
-<a href=".\BeforeYouGo.html">Before You Go</a>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admission</title>
+    </head>
+    <body>
+        <div id="menu"></div>
+		<div id="content">Admission Content</div>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript"> 
+			$(document).ready(function(){
+				$("#menu").load("menu.html"); 
+			});
+        </script> 
+    </body>
 </html>
