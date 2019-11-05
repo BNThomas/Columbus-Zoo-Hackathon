@@ -1,98 +1,106 @@
 <!Doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Admission</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+		<meta name="generator" content="Jekyll v3.8.5">
+		<title>Admission</title>
+
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+		<link rel="stylesheet" href="jumbotron.css">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="site.css">
+		
+		<!-- Bootstrap core JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="admissions/css/admissions.css">
     </head>
     <body>
-			<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-			<div class="admissions">
-				<header class="admissions__header" role="banner">
-					<div>
-						<section class="header">
-							<div class="site-nav--wrapper">
-								<section class="site-nav">
-									<div class="site-nav__container">
-										<div class="site-nav__logo">
-											<!-- Zoo logo -->
-										</div>
-										<div class="site-nav__menu">
-											<u1>
-												<li class="site-nav__menu-link site-nav__zoo-admissions" data-menu-item="zoo-admissions">
-													<a class="site-nav__link" href="admissions/zoo-admissions.html">Zoo Admissions</a>
-													<!-- button image -->
-												</li>
-												<li class="site-nav__menu-link site-nav__golf-admissions" data-menu-item="golf-admissions">
-													<a class="site-nav__link" href="admissions/golf-admissions.html">Golf Admissions</a>
-													<!-- button image -->
-												</li>
-												<li class="site-nav__menu-link site-nav__bay-admissions" data-menu-item="bay-admissions">
-													<a class="site-nav__link" href="admissions/bay-admissions.html">Zoombezi Bay Admissions</a>
-													<!-- button image -->
-												</li>
-												<li class="site-nav__menu-link site-nav__wild-admissions" data-menu-item="wild-admissions">
-													<a class="site-nav__link" href="admissions/wild-admissions.html">Wild Admissions</a>
-													<!-- button image -->
-												</li>
-												<li class="site-nav__menu-link site-nav__package-admissions" data-menu-item="package-admissions">
-													<a class="site-nav__link" href="admissions/package-admissions.html">Package Admissions</a>
-													<!-- button image -->
-												</li>
-											</u1>
-										</div>
-										<div class="site-nav__dropdown">
-											<div class="site-nav__zoo-admissions__wrapper site-nav__wrapper" style="height: 181px;">
-												<div class="site-nav__link-container">
-													<div class="site-nav__mark-up site-nav__zoo-admissions--markup">
-														<div class="site-nav__mark-up__list">
-															<a class="site-nav__menu-sub-link" href="admissions/zoo-admissions.html">Zoo Admissions</a>
-															<div class="site-nav__content">
-																<div class="site-nav__content__wrapper">
-																	<div class="site-nav__image">
-																		<a href="admissions/zoo-admissions.html">
-																			<div class="zoo-media-image">
-																				<!-- zoo image -->
-																			</div>
-																		</a>
-																	</div>
-																	<div class="site-nav__copy">
-																		<a href="admissions/zoo-admissions.html">"Bunch of text about zoo admissions"</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!-- other admission tabs -->
-												</div>
-											</div>
-											<!-- other things -->
-										</div>
-									</div>
-								</section>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="Zoo Logo SQUARE.png" width="100" height="100" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href=".\Attractions.html">Attractions</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\Attractions.html">Attractions and Events</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\BehindTheScenes.html">Behind The Scenes</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p>Today's Columbus Zoo and Aquarium Ticket Prices</p>
+									<table id="today_zoo_admission_table"></table>
+									<a class="dropdown-item" href="admissions/zoo-admissions.html">Columbus Zoo and Aquarium Tickets</a>
+								</div>
+								<div class="golf_dropdown">
+									<p>Today's Safari Golf Ticket Prices</p>
+									<table id="today_golf_admission_table"></table>
+									<a class="dropdown-item" href="admissions/golf-admissions.html">Safari Golf Tickets</a>
+								</div>
+								<div class="bay_dropdown">
+									<p>Today's Zoombezi Bay Ticket Prices</p>
+									<table id="today_bay_admission_table"></table>
+									<a class="dropdown-item" href="admissions/bay-admissions.html">Zoombezi Bay Tickets</a>
+								</div>
+								<div class="wild_dropdown">
+									<p>Today's The Wilds Ticket Prices</p>
+									<table id="today_wild_admission_table"></table>
+									<a class="dropdown-item" href="admissions/wild-admissions.html">The Wilds Tickets</a>
+								</div>
+								<div class="package_dropdown">
+									<a class="dropdown-item" href="admissions/package-admissions.html">Ticket Packages and Discounts</a>
+								</div>
 							</div>
-						</section>
-					</div>
-				</header>
-				<footer class="footer">
-					<!-- footer stuff -->
-				</footer>
+						</div>
+					</li>
+				</ul>
+				<button class="btn btn-outline-info" onclick="window.location.href = 'Admission.html';">Buy Tickets</button>
+				<button class="btn btn-outline-info" onclick="window.location.href = 'MemberRegistration.html';">Buy Membership</button>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
 			</div>
-		</div>
-		<div id="menu"></div>
-		<div id="center-scroll"></div>
-		<div id="minor-menu"></div>
-		<script type="text/javascript"> 
-			$(document).ready(function(){
-				$("#menu").load("menu.html"); 
-				$("#center-scroll").load("center-scroll.html");
-				$("#minor-menu").load("minor-menu.html");
-			});
-        </script>
+		</nav>
+		
+		<h1>This page is where people can actually purchase tickets</h1>
+		
+		<div style="height:150px;"/>
+		
+		<footer class="container">
+			<p>&copy; Company 2017-2019</p>
+		</footer>
+		<script type="text/javascript" src="admissions/js/admissions.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous">
+		</script>
     </body>
 </html>

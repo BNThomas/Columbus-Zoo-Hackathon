@@ -1,32 +1,332 @@
 <!Doctype html>
-<!-- Latest compiled and minified CSS -->
-
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Hours of Operation</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+		<meta name="generator" content="Jekyll v3.8.5">
+		<title>Hours</title>
+
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+		<link rel="stylesheet" href="jumbotron.css">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="site.css">
+		
+		<!-- Bootstrap core JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="admissions/css/admissions.css">
+		<link rel="stylesheet" href="hours/css/hours.css">
     </head>
     <body>
-	
-		<div id="menu"></div>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="Zoo Logo SQUARE.png" width="100" height="100" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+				aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href=".\Attractions.html">Attractions</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\Attractions.html">Attractions and Events</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\BehindTheScenes.html">Behind The Scenes</a></li>
+					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p>Today's Columbus Zoo and Aquarium Ticket Prices</p>
+									<table id="today_zoo_admission_table"></table>
+									<a class="dropdown-item" href="admissions/zoo-admissions.html">Columbus Zoo and Aquarium Tickets</a>
+								</div>
+								<div class="golf_dropdown">
+									<p>Today's Safari Golf Ticket Prices</p>
+									<table id="today_golf_admission_table"></table>
+									<a class="dropdown-item" href="admissions/golf-admissions.html">Safari Golf Tickets</a>
+								</div>
+								<div class="bay_dropdown">
+									<p>Today's Zoombezi Bay Ticket Prices</p>
+									<table id="today_bay_admission_table"></table>
+									<a class="dropdown-item" href="admissions/bay-admissions.html">Zoombezi Bay Tickets</a>
+								</div>
+								<div class="wild_dropdown">
+									<p>Today's The Wilds Ticket Prices</p>
+									<table id="today_wild_admission_table"></table>
+									<a class="dropdown-item" href="admissions/wild-admissions.html">The Wilds Tickets</a>
+								</div>
+								<div class="package_dropdown">
+									<a class="dropdown-item" href="admissions/package-admissions.html">Ticket Packages and Discounts</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<button class="btn btn-outline-info" onclick="window.location.href = 'Admission.html';">Buy Tickets</button>
+				<button class="btn btn-outline-info" onclick="window.location.href = 'MemberRegistration.html';">Buy Membership</button>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
 		
-		<div id="center-scroll"></div>
+		<div style="height:150px;"/>
 		
-		<div id="minor-menu"></div>
+		<!-- make these auto-generate instead of hardcoded -->
+		<table id="2019_normal_hours">
+			<caption>Normal Hours of Operation for 2019</caption>
+			<tr>
+				<th>Date</th>
+				<th>Open</th> 
+				<th>Close</th>
+			</tr>
+			<tr>
+				<td>Jan 1 - Feb 28</td>
+				<td>10AM</td>
+				<td>4PM</td>
+			</tr>
+			<tr>
+				<td>Mar 1 - Mar 31</td>
+				<td>10AM</td>
+				<td>5PM</td>
+			</tr>
+			<tr>
+				<td>Apr 1 - May 24</td>
+				<td>9AM</td>
+				<td>5PM</td>
+			</tr>
+			<tr>
+				<td>May 25 - Jun 14</td>
+				<td>9AM</td>
+				<td>7PM</td>
+			</tr>
+			<tr>
+				<td>Jun 15</td>
+				<td>9AM</td>
+				<td>3PM</td>
+			</tr>
+			<tr>
+				<td>Jun 16 - Sep 2</td>
+				<td>9AM</td>
+				<td>7PM</td>
+			</tr>
+			<tr>
+				<td>Sep 3 - Sep 30</td>
+				<td>9AM</td>
+				<td>5PM</td>
+			</tr>
+			<tr>
+				<td>Oct 1 - Nov 27</td>
+				<td>10AM</td>
+				<td>5PM</td>
+			</tr>
+			<tr>
+				<td>Nov 28</td>
+				<td>CLOSED</td>
+				<td>CLOSED</td>
+			</tr>
+			<tr>
+				<td>Nov 29 - Dec 24</td>
+				<td>10AM</td>
+				<td>5PM</td>
+			</tr>
+			<tr>
+				<td>Dec 25</td>
+				<td>CLOSED</td>
+				<td>CLOSED</td>
+			</tr>
+			<tr>
+				<td>Dec 26 - Dec 31</td>
+				<td>10AM</td>
+				<td>5PM</td>
+			</tr>
+		</table>
 		
-		<script type="text/javascript"> 
-			$(document).ready(function(){
-				$("#menu").load("menu.html"); 
-				$("#center-scroll").load("center-scroll.html");
-				$("#minor-menu").load("minor-menu.html");
-			});
-        </script> 
+		<table id="2019_boo_hours">
+			<caption>Boo at the Zoo Hours of Operation for 2019</caption>
+			<tr>
+				<th>Date</th>
+				<th>Open</th> 
+				<th>Close</th>
+			</tr>
+			<tr>
+				<td>Oct 11 (Fri)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 12 (Sat)</td>
+				<td>10AM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 13 (Sun)</td>
+				<td>10AM</td>
+				<td>8PM</td>
+			</tr>
+				<td>Oct 18 (Fri)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 19 (Sat)</td>
+				<td>10AM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 20 (Sun)</td>
+				<td>10AM</td>
+				<td>8PM</td>
+			</tr>
+				<td>Oct 25 (Fri)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 26 (Sat)</td>
+				<td>10AM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Oct 27 (Sun)</td>
+				<td>10AM</td>
+				<td>8PM</td>
+			</tr>
+		</table>
 		
+		<table id="2019_wildlight_hours">
+			<caption>Wildlights Hours of Operation for 2019-2020</caption>
+			<tr>
+				<th>Date</th>
+				<th>Open</th> 
+				<th>Close</th>
+			</tr>
+			<tr>
+				<td>Nov 15 - Nov 16 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Nov 17 - Nov 21 (Mon - Thu)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Nov 22 - Nov 23 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Nov 24 - Nov 27 (Mon - Wed)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Nov 28 (Thu)</td>
+				<td>CLOSED</td>
+				<td>CLOSED</td>
+			</tr>
+			<tr>
+				<td>Nov 29 - Nov 30 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Dec 1 - Dec 5 (Mon - Thu)</</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Dec 6 - Dec 7 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Dec 8 - Dec 12 (Mon - Thu)</</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Dec 13 - Dec 14 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Dec 15 - Dec 19 (Mon - Thu)</</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Dec 20 - Dec 21 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Dec 22 - Dec 23 (Mon - Tue)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Dec 24 - Dec 25 (Christmas Eve - Christmas Day)</td>
+				<td>CLOSED</td>
+				<td>CLOSED</td>
+			</tr>
+			<tr>
+				<td>Dec 26 (Thu)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Dec 27 - Dec 28 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Dec 29 - Jan 2 (Mon - Thu)</</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+			<tr>
+				<td>Jan 3 - Jan 4 (Fri - Sat)</td>
+				<td>5PM</td>
+				<td>10PM</td>
+			</tr>
+			<tr>
+				<td>Jan 5 (Sun)</td>
+				<td>5PM</td>
+				<td>9PM</td>
+			</tr>
+		</table>
+		
+		<footer class="container">
+			<p>&copy; Company 2017-2019</p>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous">
+		</script>
+		<script type="text/javascript" src="admissions/js/admissions.js"></script>
+		<script type="text/javascript" src="hours/js/hours.js"></script>
     </body>
 </html>
