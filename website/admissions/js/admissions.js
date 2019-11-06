@@ -127,6 +127,38 @@ var today_bay_admission_value = [
 //add wilds admission
 //add package admission
 
+//DISCOUNTS
+/*
+Zoo-It-All	Under Age 3	Ages 3-9	Ages 10-59	Ages 60+
+Franklin County	Free	$26.98 	$31.98 	$26.98 
+Outside of Franklin County	Free	$31.98 	$36.98 	$31.98 
+				
+Zoo + Zoombezi Bay (2 days)	Under Age 3	Ages 3-9	Ages 10-59	Ages 60+
+Franklin County	Free	$31.99 	$43.99 	$31.99 
+Outside of Franklin County	Free	$36.99 	$48.99 	$36.99 
+
+Group Discount (15+ tickets)	Under Age 3	Ages 3-9	Ages 10-59	Ages 60+		
+Franklin County	Free	$11.00 	$16.00 	$11.00 		
+Outside of Franklin County	Free	$16.00 	$21.00 	$16.00 		
+						
+School Discount (15+ tickets)						Rates valid only Mon-Fri 9 a.m. to 3 p.m.
+Franklin County	$3.00 					Reservations must be made at least 10 days in advance or rates will not apply.
+Outside of Franklin County	$5.00 					All groups must enter before 3:30 p.m. during Wildlights to qualify.
+						Rates NOT VALID June 15 - August 14, 2020.
+						Minimum of 15 guests required.
+						Bus drivers are free.
+						
+COTA Discount						
+Zoo Only	$3 off					
+Zoombezi Bay	$10 off					
+						
+Military Discount (Up to 6 tickets)	$2 off					
+						
+Community Organization Discount (15+ tickets)	Under Age 3	Ages 3-9	Ages 10-59	Ages 60+		Guests from Franklin County visiting Monday - Wednesday receive
+Franklin County	Free	$7.00 	$14.00 	$7.00 		the Franklin County rate of $8.50 per adult and $6 for seniors/children.
+Outside of Franklin County	Free	$10.00 	$17.00 	$10.00 	
+*/
+
 function generateTable(table, data) {
 	for (let element of data) {
 		let row = table.insertRow();
