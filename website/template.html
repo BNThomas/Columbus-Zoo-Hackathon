@@ -36,6 +36,7 @@
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 	<link rel="stylesheet" href="admissions/css/admissions.css">
+	<link rel="stylesheet" href="hours/css/hours.css">
 </head>
 
 <body>
@@ -52,9 +53,20 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href=".\Calendar.html">Events</a></li>
-
 					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href=".\Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -124,6 +136,7 @@
         <p>Columbus Zoo Hackathon Mock 2019</p>
     </footer>
 	<script type="text/javascript" src="admissions/js/admissions.js"></script>
+	<script type="text/javascript" src="hours/js/hours.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

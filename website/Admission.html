@@ -22,6 +22,7 @@
 
 		<!-- Custom styles for this template -->
 		<link rel="stylesheet" href="admissions/css/admissions.css">
+		<link rel="stylesheet" href="hours/css/hours.css">
     </head>
     <body>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -37,9 +38,20 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href=".\Calendar.html">Events</a></li>
-
 					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href=".\Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -51,26 +63,6 @@
 									<a class="dropdown-item" href="admissions/zoo-admissions.html">Columbus Zoo and Aquarium Ticket Information</a>
 									<a class="dropdown-item" href="admissions/package-admissions.html">Columbus Zoo and Aquarium Discount Information</a>
 								</div>
-								<!--
-								<div class="golf_dropdown">
-									<p>Today's Safari Golf Ticket Prices</p>
-									<table id="today_golf_admission_table"></table>
-									<a class="dropdown-item" href="admissions/golf-admissions.html">Safari Golf Tickets</a>
-								</div>
-								<div class="bay_dropdown">
-									<p>Today's Zoombezi Bay Ticket Prices</p>
-									<table id="today_bay_admission_table"></table>
-									<a class="dropdown-item" href="admissions/bay-admissions.html">Zoombezi Bay Tickets</a>
-								</div>
-								<div class="wild_dropdown">
-									<p>Today's The Wilds Ticket Prices</p>
-									<table id="today_wild_admission_table"></table>
-									<a class="dropdown-item" href="admissions/wild-admissions.html">The Wilds Tickets</a>
-								</div>
-								<div class="package_dropdown">
-									<a class="dropdown-item" href="admissions/package-admissions.html">Ticket Packages and Discounts</a>
-								</div>
-								-->
 							</div>
 						</div>
 					</li>
@@ -81,14 +73,22 @@
 		</nav>
 
 		<main role="main">
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<div class="container" style="text-align:center">
+					<h1 class="display-3">Zoo General Admission Tickets</h1>
+					<a href="admissions/zoo-admissions.html">Click here for more detailed information about tickets.</a>
+					<p></p>
+					<a href="admissions/package-admissions.html">Click here for more detailed information about available discounts.</a>
+				</div>
+			</div>
 			<div class="container span3 center">
 				<div class="row">
-					<div class="col-lg-6 image-box">
+					<div class="col-lg-12 image-box">
 						<div class="tag">Buy Tickets</div>
 						<img src="admissions/BuyTickets.jpg" class="img-thumbnail" alt="Responsive image"/>
 					</div>
 				</div>
-				<a href="admissions/zoo-admissions.html">Click here for more detailed information about tickets.</a>
 			</div>
 		</main>
 
@@ -98,6 +98,7 @@
 			<p>Columbus Zoo Hackathon Mock 2019</p>
 		</footer>
 		<script type="text/javascript" src="admissions/js/admissions.js"></script>
+		<script type="text/javascript" src="hours/js/hours.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 			crossorigin="anonymous">

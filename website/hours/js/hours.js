@@ -3,6 +3,7 @@ var today = new Date();
 today.setTime(today.getTime());
 
 //Normal hours
+/*
 var zoo_jan_normal_hours = new Array("10AM", "4PM");
 var zoo_feb_normal_hours = new Array("10AM", "4PM");
 var zoo_mar_normal_hours = new Array("10AM", "5PM");
@@ -15,22 +16,35 @@ var zoo_sep_normal_hours = new Array("9AM", "5PM");
 var zoo_oct_normal_hours = new Array("10AM", "5PM");
 var zoo_nov_normal_hours = new Array("10AM", "5PM");
 var zoo_dec_normal_hours = new Array("10AM", "5PM");
+*/
 
 //Holiday hours
+/*
 var zoo_memorial_holiday_hours = new Array("9AM", "7PM");
 var zoo_labor_holiday_hours = new Array("9AM", "7PM");
 var zoo_thanksgiving_holiday_hours = new Array("CLOSED");
 var zoo_christmas_eve_holiday_hours = new Array("10AM", "5PM");
 var zoo_christmas_holiday_hours = new Array("CLOSED");
+*/
 
 //Event hours
+/*
 var zoo_zoofari_event_hours = new Array("9AM", "3PM");
 var zoo_boo_fri_event_hours = new Array("5PM", "9PM");
 var zoo_boo_sat_event_hours = new Array("10AM", "9PM");
 var zoo_boo_sun_event_hours = new Array("10AM", "8PM");
 var zoo_wild_sun_thu_event_hours = new Array("5PM", "9PM");
 var zoo_wild_fri_sat_event_hours = new Array("5PM", "10PM");
+*/
 
+//poc just for hackathon demo
+var hackathon_day_open = "10AM";
+var hackathon_day_close = "5PM";
+var today_zoo_hours_value = [
+	{ "Open": hackathon_day_open, "Close": hackathon_day_close }
+];
+
+/*
 var today_zoo_hours_value = [
 	{ "Open at": zoo_age_tier_1, "Close at": zoo_fcr_price_tier_1[today.getDay()] },
 	{ "Age": zoo_age_tier_2, "Franklin County Residents": zoo_fcr_price_tier_2[today.getDay()], "Non-Franklin County Residents": zoo_nfcr_price_tier_2[today.getDay()], "Reciprocal Memberships": zoo_rm_price_tier_2[today.getDay()] },
@@ -119,6 +133,7 @@ function getDateString(year, month, week, day) {
     }
     return dateString;
 }
+*/
 
 function generateTable(table, data) {
 	for (let element of data) {
@@ -148,6 +163,7 @@ let today_zoo_hours_data = Object.keys(today_zoo_hours_value[0]);
 generateTable(today_zoo_hours_table, today_zoo_hours_value);
 generateTableHead(today_zoo_hours_table, today_zoo_hours_data);
 
+/*
 let sunday_zoo_hours_table = document.getElementById('sunday_zoo_hours_table');
 let sunday_zoo_hours_data = Object.keys(sunday_zoo_hours_value[0]);
 generateTable(sunday_zoo_hours_table, sunday_zoo_hours_value);
@@ -182,3 +198,4 @@ let saturday_zoo_hours_table = document.getElementById('saturday_zoo_hours_table
 let saturday_zoo_hours_data = Object.keys(saturday_zoo_hours_value[0]);
 generateTable(saturday_zoo_hours_table, saturday_zoo_hours_value);
 generateTableHead(saturday_zoo_hours_table, saturday_zoo_hours_data);
+*/

@@ -159,6 +159,50 @@ Franklin County	Free	$7.00 	$14.00 	$7.00 		the Franklin County rate of $8.50 pe
 Outside of Franklin County	Free	$10.00 	$17.00 	$10.00 	
 */
 
+//poc just for hackathon demo
+//Ages 0-2
+var zoo_bulk_age_tier_1 = "Under Age 3";
+//Frankin County Residents
+var zoo_bulk_fcr_price_tier_1 = new Array("Free");
+//Non-Frankin County Residents
+var zoo_bulk_nfcr_price_tier_1 = new Array("Free");
+//Reciprocal Memberships
+var zoo_bulk_rm_price_tier_1 = new Array("Free");
+
+//Ages 3-9
+var zoo_bulk_age_tier_2 = "Ages 3-9";
+//Frankin County Residents
+var zoo_bulk_fcr_price_tier_2 = new Array("$11.00");
+//Non-Frankin County Residents
+var zoo_bulk_nfcr_price_tier_2 = new Array("$16.00");
+//Reciprocal Memberships
+var zoo_bulk_rm_price_tier_2 = new Array("$8.49");
+
+//Ages 10-59
+var zoo_bulk_age_tier_3 = "Ages 10-59";
+//Frankin County Residents
+var zoo_bulk_fcr_price_tier_3 = new Array("$16.00");
+//Non-Frankin County Residents
+var zoo_bulk_nfcr_price_tier_3 = new Array("$21.00");
+//Reciprocal Memberships
+var zoo_bulk_rm_price_tier_3 = new Array("$10.99");
+
+//Ages 60+
+var zoo_bulk_age_tier_4 = "Ages 60+";
+//Frankin County Residents
+var zoo_bulk_fcr_price_tier_4 = new Array("$11.00");
+//Non-Frankin County Residents
+var zoo_bulk_nfcr_price_tier_4 = new Array("$16.00");
+//Reciprocal Memberships
+var zoo_bulk_rm_price_tier_4 = new Array("$8.49");
+
+var hackathon_zoo_bulk_admission_value = [
+	{ "Age": zoo_bulk_age_tier_1, "Franklin County Residents": zoo_bulk_fcr_price_tier_1[0], "Non-Franklin County Residents": zoo_bulk_nfcr_price_tier_1[0], "Reciprocal Memberships": zoo_bulk_rm_price_tier_1[0] },
+	{ "Age": zoo_bulk_age_tier_2, "Franklin County Residents": zoo_bulk_fcr_price_tier_2[0], "Non-Franklin County Residents": zoo_bulk_nfcr_price_tier_2[0], "Reciprocal Memberships": zoo_bulk_rm_price_tier_2[0] },
+	{ "Age": zoo_bulk_age_tier_3, "Franklin County Residents": zoo_bulk_fcr_price_tier_3[0], "Non-Franklin County Residents": zoo_bulk_nfcr_price_tier_3[0], "Reciprocal Memberships": zoo_bulk_rm_price_tier_3[0] },
+	{ "Age": zoo_bulk_age_tier_4, "Franklin County Residents": zoo_bulk_fcr_price_tier_4[0], "Non-Franklin County Residents": zoo_bulk_nfcr_price_tier_4[0], "Reciprocal Memberships": zoo_bulk_rm_price_tier_4[0] }
+];
+
 function generateTable(table, data) {
 	for (let element of data) {
 		let row = table.insertRow();
@@ -236,3 +280,9 @@ let today_bay_admission_table = document.getElementById('today_bay_admission_tab
 let today_bay_admission_data = Object.keys(today_bay_admission_value[0]);
 generateTable(today_bay_admission_table, today_bay_admission_value);
 generateTableHead(today_bay_admission_table, today_bay_admission_data);
+
+//Bulk Discount
+let hackathon_zoo_bulk_admission_table = document.getElementById('hackathon_zoo_bulk_admission_table');
+let hackathon_zoo_bulk_admission_data = Object.keys(hackathon_zoo_bulk_admission_value[0]);
+generateTable(hackathon_zoo_bulk_admission_table, hackathon_zoo_bulk_admission_value);
+generateTableHead(hackathon_zoo_bulk_admission_table, hackathon_zoo_bulk_admission_data);

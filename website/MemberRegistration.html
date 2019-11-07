@@ -22,6 +22,7 @@
 
 		<!-- Custom styles for this template -->
 		<link rel="stylesheet" href="admissions/css/admissions.css">
+		<link rel="stylesheet" href="hours/css/hours.css">
     </head>
     <body>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -37,9 +38,20 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href=".\Calendar.html">Events</a></li>
-
 					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href=".\Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -61,14 +73,20 @@
 		</nav>
 
 		<main role="main">
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<div class="container" style="text-align:center">
+					<h1 class="display-3">Zoo Memberships</h1>
+					<a href="https://www.columbuszoo.org/home/visit/get-your-membership/zoo-membership">Click here for more detailed information about memberships.</a>
+				</div>
+			</div>
 			<div class="container span3 center">
 				<div class="row">
-					<div class="col-lg-6 image-box">
+					<div class="col-lg-12 image-box">
 						<div class="tag">Buy Membership</div>
 						<img src="admissions/BuyMembership.jpg" class="img-thumbnail" alt="Responsive image"/>
 					</div>
 				</div>
-				<a href="https://www.columbuszoo.org/home/visit/get-your-membership/zoo-membership">Click here for more detailed information about memberships.</a>
 			</div>
 		</main>
 
@@ -78,6 +96,7 @@
 			<p>Columbus Zoo Hackathon Mock 2019</p>
 		</footer>
 		<script type="text/javascript" src="admissions/js/admissions.js"></script>
+		<script type="text/javascript" src="hours/js/hours.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 			crossorigin="anonymous">

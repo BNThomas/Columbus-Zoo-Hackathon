@@ -1,45 +1,46 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Calendar & Events</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+		<meta name="generator" content="Jekyll v3.8.5">
+		<title>Calendar & Events</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
-	<link rel="stylesheet" href="Calendar.css">
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+		<link rel="stylesheet" href="Calendar.css">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="site.css">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="site.css">
 
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-	<link rel="stylesheet" href="admissions/css/admissions.css">
-</head>
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+		<!-- Custom styles for this template -->
+		<link href="jumbotron.css" rel="stylesheet">
+		<link rel="stylesheet" href="admissions/css/admissions.css">
+		<link rel="stylesheet" href="hours/css/hours.css">
+	</head>
 
-<body>
+	<body>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 			<a class="navbar-brand" href="#">
 				<img src="Zoo Logo SQUARE.png" width="100" height="100" alt="">
@@ -53,9 +54,20 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href=".\Calendar.html">Events</a></li>
-
 					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href=".\Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -76,133 +88,134 @@
 			</div>
 		</nav>
 
-    <main role="main">
+		<main role="main">
 
-		<div class="container span3 center">
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">JACK HANNA DAYS: Nov 1-20</div> 
-				<img  src="calendar/jack.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+			<div class="container span3 center">
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">JACK HANNA DAYS: Nov 1-20</div> 
+					<img  src="calendar/jack.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">LEOPARDS ON DISLAY: Dec & Jan</div> 
+					<img  src="calendar/leopard.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">LION PRIDE: Limited Time!</div> 
+					<div class="member-tag">FREE FOR MEMBERS!</div>
+					<img  src="calendar/lion.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">HOWLING: Weeknights @ 7pm</div> 
+					<img  src="calendar/wolf.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">Celebrate Birthdays: Register</div> 
+					<img  src="calendar/behind-birthday.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">DON FLAMINGO: Feather Collecting</div> 
+					<div class="member-tag">FREE FOR MEMBERS!</div>
+					<img  src="calendar/flamingo.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>	  
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">BEAR WITH IT: Tues and Thurs</div> 
+					<img  src="calendar/bear.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">ELEPHANT EARS: Daily, 3pm - 5pm</div> 
+					<img  src="calendar/elephant.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>	   
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">PAINT WITH PENGUINS: Register</div> 
+					<div class="member-tag">MEMBER DISCOUNT!</div>
+					<img  src="calendar/behind-painting.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">ELEPHANT EARS: Daily, 3pm - 5pm</div> 
+					<img  src="calendar/elephant.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">Aquarium Tours: Register</div> 
+					<div class="group-tag">GROUP REGISTRATION</div>
+					<img  src="calendar/behind-aquarium.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">SNOW FOX DISCOVERY: All Winter</div> 
+					<img  src="calendar/fox.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">TOUCH AN ALLIGATOR: Register</div> 
+					<div class="member-tag">MEMBER DISCOUNT!</div>
+					<img  src="calendar/alligator.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">BISON FUR WEAVING: Register</div> 
+					<img  src="calendar/bison.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">ZOO CAMP: Summer</div> 
+					<div class="group-tag">GROUP REGISTRATION</div>
+					<img  src="calendar/behind-camp.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">SAFARI TOURS: Register</div> 
+					<img  src="calendar/behind-safari.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>	
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">ENDANGERED SPECIES: Daily, 5pm</div> 
+					<img  src="calendar/tiger.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">PETTING ZOO: All Day, Every Day</div> 
+					<div class="member-tag">FREE FOR MEMBERS!</div>
+					<img  src="calendar/tortuise.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-lg-6 image-box">
+					<div class="tag">AFTER HOURS TOUR: Register</div> 
+					<img  src="calendar/behind-after.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+				<div class="col-lg-6 image-box">
+					<div class="tag">FISHTASTIC: 1pm - 4pm</div> 
+					<img  src="calendar/fish.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
+				</div>
+			  </div>
+			  
 			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">LEOPARDS ON DISLAY: Dec & Jan</div> 
-				<img  src="calendar/leopard.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">LION PRIDE: Limited Time!</div> 
-				<div class="member-tag">FREE FOR MEMBERS!</div>
-				<img  src="calendar/lion.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">HOWLING: Weeknights @ 7pm</div> 
-				<img  src="calendar/wolf.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">Celebrate Birthdays: Register</div> 
-				<img  src="calendar/behind-birthday.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">DON FLAMINGO: Feather Collecting</div> 
-				<div class="member-tag">FREE FOR MEMBERS!</div>
-				<img  src="calendar/flamingo.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>	  
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">BEAR WITH IT: Tues and Thurs</div> 
-				<img  src="calendar/bear.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">ELEPHANT EARS: Daily, 3pm - 5pm</div> 
-				<img  src="calendar/elephant.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>	   
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">PAINT WITH PENGUINS: Register</div> 
-				<div class="member-tag">MEMBER DISCOUNT!</div>
-				<img  src="calendar/behind-painting.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">ELEPHANT EARS: Daily, 3pm - 5pm</div> 
-				<img  src="calendar/elephant.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">Aquarium Tours: Register</div> 
-				<div class="group-tag">GROUP REGISTRATION</div>
-				<img  src="calendar/behind-aquarium.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">SNOW FOX DISCOVERY: All Winter</div> 
-				<img  src="calendar/fox.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">TOUCH AN ALLIGATOR: Register</div> 
-				<div class="member-tag">MEMBER DISCOUNT!</div>
-				<img  src="calendar/alligator.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">BISON FUR WEAVING: Register</div> 
-				<img  src="calendar/bison.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">ZOO CAMP: Summer</div> 
-				<div class="group-tag">GROUP REGISTRATION</div>
-				<img  src="calendar/behind-camp.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">SAFARI TOURS: Register</div> 
-				<img  src="calendar/behind-safari.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>	
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">ENDANGERED SPECIES: Daily, 5pm</div> 
-				<img  src="calendar/tiger.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">PETTING ZOO: All Day, Every Day</div> 
-				<div class="member-tag">FREE FOR MEMBERS!</div>
-				<img  src="calendar/tortuise.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-lg-6 image-box">
-				<div class="tag">AFTER HOURS TOUR: Register</div> 
-				<img  src="calendar/behind-after.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-			<div class="col-lg-6 image-box">
-				<div class="tag">FISHTASTIC: 1pm - 4pm</div> 
-				<img  src="calendar/fish.PNG" class="img-thumbnail image-size" alt="Responsive image"/>
-			</div>
-		  </div>
-		  
-		</div>
-    </main>
+		</main>
 
-    <footer class="container">
-        <p>Columbus Zoo Hackathon Mock 2019</p>
-    </footer>
-	<script type="text/javascript" src="admissions/js/admissions.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
+		<footer class="container">
+			<p>Columbus Zoo Hackathon Mock 2019</p>
+		</footer>
+		<script type="text/javascript" src="admissions/js/admissions.js"></script>
+		<script type="text/javascript" src="hours/js/hours.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+	</body>
 
 </html>

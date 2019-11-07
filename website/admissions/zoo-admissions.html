@@ -22,6 +22,7 @@
 
 		<!-- Custom styles for this template -->
 		<link rel="stylesheet" href="css/admissions.css">
+		<link rel="stylesheet" href="../hours/css/hours.css">
     </head>
     <body>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -35,12 +36,22 @@
 
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="../Attractions.html">Attractions</a></li>
 					<li class="nav-item"><a class="nav-link" href="../BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Calendar.html">Events</a></li>
-					<li class="nav-item"><a class="nav-link" href="../BehindTheScenes.html">Behind The Scenes</a></li>
 					<li class="nav-item"><a class="nav-link" href="../JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href="../Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href="../Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -52,115 +63,104 @@
 									<a class="dropdown-item" href="zoo-admissions.html">Columbus Zoo and Aquarium Ticket Information</a>
 									<a class="dropdown-item" href="package-admissions.html">Columbus Zoo and Aquarium Discount Information</a>
 								</div>
-								<!--
-								<div class="golf_dropdown">
-									<p>Today's Safari Golf Ticket Prices</p>
-									<table id="today_golf_admission_table"></table>
-									<a class="dropdown-item" href="admissions/golf-admissions.html">Safari Golf Tickets</a>
-								</div>
-								<div class="bay_dropdown">
-									<p>Today's Zoombezi Bay Ticket Prices</p>
-									<table id="today_bay_admission_table"></table>
-									<a class="dropdown-item" href="admissions/bay-admissions.html">Zoombezi Bay Tickets</a>
-								</div>
-								<div class="wild_dropdown">
-									<p>Today's The Wilds Ticket Prices</p>
-									<table id="today_wild_admission_table"></table>
-									<a class="dropdown-item" href="admissions/wild-admissions.html">The Wilds Tickets</a>
-								</div>
-								<div class="package_dropdown">
-									<a class="dropdown-item" href="admissions/package-admissions.html">Ticket Packages and Discounts</a>
-								</div>
-								-->
 							</div>
 						</div>
 					</li>
 				</ul>
 				<button class="btn btn-info" onclick="window.location.href = '../Admission.html';" style="margin:5px;">Buy Tickets</button>
 				<button class="btn btn-info" onclick="window.location.href = '../MemberRegistration.html';" style="margin:5px;">Buy Membership</button>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
 			</div>
 		</nav>
 
-		<div style="text-align:center">
-			<h1>Zoo General Admission</h1>
-			<a href="package-admissions.html">Click here for more detailed information about available discounts.</a>
-		</div>
-		<p></p>
-		<!-- make this auto-generated instead of hardcoded -->
-		<table id="transportation_table">
-			<caption>Transportation Fee</caption>
-			<tr>
-				<th>Transportation Type</th>
-				<th>Entry</th>
-				<th>Exit</th>
-			</tr>
-			<tr>
-				<td>Parking</td>
-				<td>$10.00</td>
-				<td>Free</td>
-			</tr>
-			<tr>
-				<td>COTA Bus</td>
-				<td>$2.00</td>
-				<td>$2.00</td>
-			</tr>
-			<tr>
-				<td>COTA Bus (pass holders and children over 48" tall under age 12)</td>
-				<td>$1.00</td>
-				<td>$1.00</td>
-			</tr>
-			<tr>
-				<td>COTA Bus (children under 48" tall)</td>
-				<td>Free</td>
-				<td>Free</td>
-			</tr>
-		</table>
-		<p></p>
-		<!-- make this auto-generated instead of hardcoded -->
-		<table id="locker_table">
-			<caption>Zoo Locker Fees</caption>
-			<tr>
-				<th>Locker Size</th>
-				<th>Deposit</th>
-				<th>Rental</th>
-			</tr>
-			<tr>
-				<td>Small Locker</td>
-				<td>$5.00</td>
-				<td>$8.00</td>
-			</tr>
-			<tr>
-				<td>Large Locker</td>
-				<td>$5.00</td>
-				<td>$10.00</td>
-			</tr>
-		</table>
-		<p>For reference, here is the daily admission rate throughout the week.</p>
-		<table id="sunday_zoo_admission_table">
-			<caption>Sunday's Admission Price</caption>
-		</table>
-		<table id="monday_zoo_admission_table">
-			<caption>Monday's Admission Price</caption>
-		</table>
-		<table id="tuesday_zoo_admission_table">
-			<caption>Tuesday's Admission Price</caption>
-		</table>
-		<table id="wednesday_zoo_admission_table">
-			<caption>Wednesday's Admission Price</caption>
-		</table>
-		<table id="thursday_zoo_admission_table">
-			<caption>Thursday's Admission Price</caption>
-		</table>
-		<table id="friday_zoo_admission_table">
-			<caption>Friday's Admission Price</caption>
-		</table>
-		<table id="saturday_zoo_admission_table">
-			<caption>Saturday's Admission Price</caption>
-		</table>
+		<main role="main">
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<div class="container" style="text-align:center">
+					<h1 class="display-3">Zoo General Admission</h1>
+					<a href="package-admissions.html">Click here for more detailed information about available discounts.</a>
+				</div>
+			</div>
+			<div class="container span3 center">
+				<div class="row">
+					<div class="col-md-6">
+						<p style="text-align:center">Here are some additional fees that may apply.</p>
+						<!-- make this auto-generated instead of hardcoded -->
+						<table id="transportation_table">
+							<caption>Transportation Fee</caption>
+							<tr>
+								<th>Transportation Type</th>
+								<th>Entry</th>
+								<th>Exit</th>
+							</tr>
+							<tr>
+								<td>Parking</td>
+								<td>$10.00</td>
+								<td>Free</td>
+							</tr>
+							<tr>
+								<td>COTA Bus</td>
+								<td>$2.00</td>
+								<td>$2.00</td>
+							</tr>
+							<tr>
+								<td>COTA Bus (pass holders and children over 48" tall under age 12)</td>
+								<td>$1.00</td>
+								<td>$1.00</td>
+							</tr>
+							<tr>
+								<td>COTA Bus (children under 48" tall)</td>
+								<td>Free</td>
+								<td>Free</td>
+							</tr>
+						</table>
+						<p></p>
+						<!-- make this auto-generated instead of hardcoded -->
+						<table id="locker_table">
+							<caption>Zoo Locker Fees</caption>
+							<tr>
+								<th>Locker Size</th>
+								<th>Deposit</th>
+								<th>Rental</th>
+							</tr>
+							<tr>
+								<td>Small Locker</td>
+								<td>$5.00</td>
+								<td>$8.00</td>
+							</tr>
+							<tr>
+								<td>Large Locker</td>
+								<td>$5.00</td>
+								<td>$10.00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<p style="text-align:center">Here are the daily admission rates throughout the week.</p>
+						<table id="sunday_zoo_admission_table">
+							<caption>Sunday's Admission Price</caption>
+						</table>
+						<table id="monday_zoo_admission_table">
+							<caption>Monday's Admission Price</caption>
+						</table>
+						<table id="tuesday_zoo_admission_table">
+							<caption>Tuesday's Admission Price</caption>
+						</table>
+						<table id="wednesday_zoo_admission_table">
+							<caption>Wednesday's Admission Price</caption>
+						</table>
+						<table id="thursday_zoo_admission_table">
+							<caption>Thursday's Admission Price</caption>
+						</table>
+						<table id="friday_zoo_admission_table">
+							<caption>Friday's Admission Price</caption>
+						</table>
+						<table id="saturday_zoo_admission_table">
+							<caption>Saturday's Admission Price</caption>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
 
 		<div style="height:150px;"/>
 
@@ -168,6 +168,7 @@
 			<p>Columbus Zoo Hackathon Mock 2019</p>
 		</footer>
 		<script type="text/javascript" src="js/admissions.js"></script>
+		<script type="text/javascript" src="../hours/js/hours.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 			crossorigin="anonymous">

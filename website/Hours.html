@@ -38,9 +38,20 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href=".\BeforeYouGo.html">Before You Go</a></li>
 					<li class="nav-item"><a class="nav-link" href=".\Calendar.html">Events</a></li>
-
 					<li class="nav-item"><a class="nav-link" href=".\JobsOpportunities.html">Jobs & Opportunities</a></li>
-					<li class="nav-item"><a class="nav-link" href=".\Hours.html">Hours</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Hours</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<div class="zoo_dropdown">
+									<p style="text-align:center">Today's Columbus Zoo and Aquarium Hours of Operation</p>
+									<table id="today_zoo_hours_table"></table>
+									<a class="dropdown-item" href=".\Hours.html">Columbus Zoo and Aquarium Hours Information</a>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="admission_dropdown" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Admission Prices</a>
@@ -61,233 +72,247 @@
 			</div>
 		</nav>
 
+		<main role="main">
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<div class="container" style="text-align:center">
+					<h1 class="display-3">Hours of Operation</h1>
+				</div>
+			</div>
+			<div class="container span3 center">
+				<div class="row">
+					<div class="col-md-6">
+						<!-- make these auto-generate instead of hardcoded -->
+						<table id="2019_normal_hours">
+							<caption>Daily 2019</caption>
+							<tr>
+								<th>Date</th>
+								<th>Open</th>
+								<th>Close</th>
+							</tr>
+							<tr>
+								<td>Jan 1 - Feb 28</td>
+								<td>10AM</td>
+								<td>4PM</td>
+							</tr>
+							<tr>
+								<td>Mar 1 - Mar 31</td>
+								<td>10AM</td>
+								<td>5PM</td>
+							</tr>
+							<tr>
+								<td>Apr 1 - May 24</td>
+								<td>9AM</td>
+								<td>5PM</td>
+							</tr>
+							<tr>
+								<td>May 25 - Jun 14</td>
+								<td>9AM</td>
+								<td>7PM</td>
+							</tr>
+							<tr>
+								<td>Jun 15</td>
+								<td>9AM</td>
+								<td>3PM</td>
+							</tr>
+							<tr>
+								<td>Jun 16 - Sep 2</td>
+								<td>9AM</td>
+								<td>7PM</td>
+							</tr>
+							<tr>
+								<td>Sep 3 - Sep 30</td>
+								<td>9AM</td>
+								<td>5PM</td>
+							</tr>
+							<tr>
+								<td>Oct 1 - Nov 27</td>
+								<td>10AM</td>
+								<td>5PM</td>
+							</tr>
+							<tr>
+								<td>Nov 28</td>
+								<td>CLOSED</td>
+								<td>CLOSED</td>
+							</tr>
+							<tr>
+								<td>Nov 29 - Dec 24</td>
+								<td>10AM</td>
+								<td>5PM</td>
+							</tr>
+							<tr>
+								<td>Dec 25</td>
+								<td>CLOSED</td>
+								<td>CLOSED</td>
+							</tr>
+							<tr>
+								<td>Dec 26 - Dec 31</td>
+								<td>10AM</td>
+								<td>5PM</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<table id="2019_boo_hours">
+							<caption>Boo at the Zoo 2019</caption>
+							<tr>
+								<th>Date</th>
+								<th>Open</th>
+								<th>Close</th>
+							</tr>
+							<tr>
+								<td>Oct 11 (Fri)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 12 (Sat)</td>
+								<td>10AM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 13 (Sun)</td>
+								<td>10AM</td>
+								<td>8PM</td>
+							</tr>
+								<td>Oct 18 (Fri)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 19 (Sat)</td>
+								<td>10AM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 20 (Sun)</td>
+								<td>10AM</td>
+								<td>8PM</td>
+							</tr>
+								<td>Oct 25 (Fri)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 26 (Sat)</td>
+								<td>10AM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Oct 27 (Sun)</td>
+								<td>10AM</td>
+								<td>8PM</td>
+							</tr>
+						</table>
+						<table id="2019_wildlight_hours">
+							<caption>Wildlights 2019-2020</caption>
+							<tr>
+								<th>Date</th>
+								<th>Open</th>
+								<th>Close</th>
+							</tr>
+							<tr>
+								<td>Nov 15 - Nov 16 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Nov 17 - Nov 21 (Mon - Thu)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Nov 22 - Nov 23 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Nov 24 - Nov 27 (Mon - Wed)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Nov 28 (Thu)</td>
+								<td>CLOSED</td>
+								<td>CLOSED</td>
+							</tr>
+							<tr>
+								<td>Nov 29 - Nov 30 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Dec 1 - Dec 5 (Mon - Thu)</</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Dec 6 - Dec 7 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Dec 8 - Dec 12 (Mon - Thu)</</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Dec 13 - Dec 14 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Dec 15 - Dec 19 (Mon - Thu)</</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Dec 20 - Dec 21 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Dec 22 - Dec 23 (Mon - Tue)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Dec 24 - Dec 25 (Christmas Eve - Christmas Day)</td>
+								<td>CLOSED</td>
+								<td>CLOSED</td>
+							</tr>
+							<tr>
+								<td>Dec 26 (Thu)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Dec 27 - Dec 28 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Dec 29 - Jan 2 (Mon - Thu)</</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+							<tr>
+								<td>Jan 3 - Jan 4 (Fri - Sat)</td>
+								<td>5PM</td>
+								<td>10PM</td>
+							</tr>
+							<tr>
+								<td>Jan 5 (Sun)</td>
+								<td>5PM</td>
+								<td>9PM</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+
 		<div style="height:150px;"/>
-
-		<!-- make these auto-generate instead of hardcoded -->
-		<table id="2019_normal_hours">
-			<caption>Normal Hours of Operation for 2019</caption>
-			<tr>
-				<th>Date</th>
-				<th>Open</th>
-				<th>Close</th>
-			</tr>
-			<tr>
-				<td>Jan 1 - Feb 28</td>
-				<td>10AM</td>
-				<td>4PM</td>
-			</tr>
-			<tr>
-				<td>Mar 1 - Mar 31</td>
-				<td>10AM</td>
-				<td>5PM</td>
-			</tr>
-			<tr>
-				<td>Apr 1 - May 24</td>
-				<td>9AM</td>
-				<td>5PM</td>
-			</tr>
-			<tr>
-				<td>May 25 - Jun 14</td>
-				<td>9AM</td>
-				<td>7PM</td>
-			</tr>
-			<tr>
-				<td>Jun 15</td>
-				<td>9AM</td>
-				<td>3PM</td>
-			</tr>
-			<tr>
-				<td>Jun 16 - Sep 2</td>
-				<td>9AM</td>
-				<td>7PM</td>
-			</tr>
-			<tr>
-				<td>Sep 3 - Sep 30</td>
-				<td>9AM</td>
-				<td>5PM</td>
-			</tr>
-			<tr>
-				<td>Oct 1 - Nov 27</td>
-				<td>10AM</td>
-				<td>5PM</td>
-			</tr>
-			<tr>
-				<td>Nov 28</td>
-				<td>CLOSED</td>
-				<td>CLOSED</td>
-			</tr>
-			<tr>
-				<td>Nov 29 - Dec 24</td>
-				<td>10AM</td>
-				<td>5PM</td>
-			</tr>
-			<tr>
-				<td>Dec 25</td>
-				<td>CLOSED</td>
-				<td>CLOSED</td>
-			</tr>
-			<tr>
-				<td>Dec 26 - Dec 31</td>
-				<td>10AM</td>
-				<td>5PM</td>
-			</tr>
-		</table>
-
-		<table id="2019_boo_hours">
-			<caption>Boo at the Zoo Hours of Operation for 2019</caption>
-			<tr>
-				<th>Date</th>
-				<th>Open</th>
-				<th>Close</th>
-			</tr>
-			<tr>
-				<td>Oct 11 (Fri)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 12 (Sat)</td>
-				<td>10AM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 13 (Sun)</td>
-				<td>10AM</td>
-				<td>8PM</td>
-			</tr>
-				<td>Oct 18 (Fri)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 19 (Sat)</td>
-				<td>10AM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 20 (Sun)</td>
-				<td>10AM</td>
-				<td>8PM</td>
-			</tr>
-				<td>Oct 25 (Fri)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 26 (Sat)</td>
-				<td>10AM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Oct 27 (Sun)</td>
-				<td>10AM</td>
-				<td>8PM</td>
-			</tr>
-		</table>
-
-		<table id="2019_wildlight_hours">
-			<caption>Wildlights Hours of Operation for 2019-2020</caption>
-			<tr>
-				<th>Date</th>
-				<th>Open</th>
-				<th>Close</th>
-			</tr>
-			<tr>
-				<td>Nov 15 - Nov 16 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Nov 17 - Nov 21 (Mon - Thu)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Nov 22 - Nov 23 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Nov 24 - Nov 27 (Mon - Wed)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Nov 28 (Thu)</td>
-				<td>CLOSED</td>
-				<td>CLOSED</td>
-			</tr>
-			<tr>
-				<td>Nov 29 - Nov 30 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Dec 1 - Dec 5 (Mon - Thu)</</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Dec 6 - Dec 7 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Dec 8 - Dec 12 (Mon - Thu)</</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Dec 13 - Dec 14 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Dec 15 - Dec 19 (Mon - Thu)</</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Dec 20 - Dec 21 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Dec 22 - Dec 23 (Mon - Tue)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Dec 24 - Dec 25 (Christmas Eve - Christmas Day)</td>
-				<td>CLOSED</td>
-				<td>CLOSED</td>
-			</tr>
-			<tr>
-				<td>Dec 26 (Thu)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Dec 27 - Dec 28 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Dec 29 - Jan 2 (Mon - Thu)</</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-			<tr>
-				<td>Jan 3 - Jan 4 (Fri - Sat)</td>
-				<td>5PM</td>
-				<td>10PM</td>
-			</tr>
-			<tr>
-				<td>Jan 5 (Sun)</td>
-				<td>5PM</td>
-				<td>9PM</td>
-			</tr>
-		</table>
 
 		<footer class="container">
 			<p>Columbus Zoo Hackathon Mock 2019</p>
