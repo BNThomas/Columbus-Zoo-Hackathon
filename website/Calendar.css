@@ -19,3 +19,8 @@
 	.separator-row {
 		height: 20px;
 	}
+	
+	.image-size{
+		max-height:400px;
+		max-width:500px;
+	}
